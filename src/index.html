@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>视界PLUS2015年度最佳设计作品评选</title>
+    <script src="lib/smodule.js"></script>
+    <script src="lib/config.js"></script>
+    <script>
+        //适配的脚本
+        C.use(["flexible/index"]);
+    </script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="be-wrap">
+        <div class="be-banner">
+            <img src="images/zuopin_02.png" alt="">
+        </div>
+        <div class="be-list">
+
+
+        </div>
+        <div class="be-text">
+            <h3 class="act-title">活动规则</h3>
+            <p>
+                一人一票，以小组为单位，根据每组得到的总票数评选出一等奖，二等奖各1名
+                <br> 获奖作品所在组总票数必须大于100票（包括100），否则视为无效
+            </p>
+            <p></p>
+            <h3 class="act-title">奖品</h3>
+            <p>
+                一等奖：1000元小组团建费
+                <br> 二等奖：800元小组团建费
+                <br>
+            </p>
+            <p></p>
+            <p></p>
+            <h3>截止时间：2016年1月10号</h3>
+            <h3 style="color:#ff3c32">关注视界PLUS,更多惊喜礼物、彩蛋等着你</h3>
+            <div class="be-ewm">
+                <img data-original="images/zuopin_09.jpg" class="j_lazy" alt="">
+            </div>
+        </div>
+        <div class="be-bottom">
+            <h3>视界PLUS</h3>
+            <h4>专注互联网视觉设计</h4>
+        </div>
+    </div>
+    <script type="text/template" id="itemTmpl">
+        <%items.forEach(function(item,index){%>
+            <section class="be-workitem">
+                <a href="javascript:void(0)" class="work-img show-bigimg" data-source="<%=item.bimg%>"><img data-original="<%=item.simg%>" class="j_lazy" src="images/zuopin_02-03.jpg" alt=""></a>
+                <div class="work-info">
+                    <p class="info-left">
+                        <span class="work-vote">编号:<%=item.aid.replace(/2015designwork/g,"")%>&nbsp;&nbsp;票数:<em class="vote-num vote_<%=item.aid%>">--</em></span>
+                        <span class="work-author">设计师:<%=item.author%></span>
+                    </p>
+                    <p data-id="<%=item.aid%>" class="vote-btn">投票</p>
+                </div>
+            </section>
+            <%})%>
+    </script>
+    <script>
+        C.use(["h5module/index"], function (h5) {
+            new h5();
+        });
+    </script>
+</body>
+
+</html>
