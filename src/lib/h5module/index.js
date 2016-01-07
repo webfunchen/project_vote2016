@@ -46,7 +46,9 @@ define("h5module/index", ['zepto', 'zeptotouch/index', 'zeptolazyload/index', 'a
                 url: "./data/data.php",
                 dataType: "json",
                 success: function (d) {
+					d.items.sort(function(a,b) {return Math.random()>.5 ? -1 : 1;});
                     var html = template('itemTmpl', d);
+					//console.log(d);
                     $(".be-list").html(html);
                     self.zoomEvents();
                     self.getVote();
