@@ -94,6 +94,7 @@ define("h5module/index", ['zepto', 'zeptotouch/index', 'zeptolazyload/index', 'a
                 success: function (d) {
                     if (d.success == true) {
                         self.getVotesingle(vid);
+                        new toast("投票成功");
                     } else {
                         if(d.code=="E002")
                         {
@@ -122,9 +123,18 @@ define("h5module/index", ['zepto', 'zeptotouch/index', 'zeptolazyload/index', 'a
                         var voteid = v.voteId,
                             votenum = v.voteNum;
                         $(".vote_" + voteid).html(votenum);
+
                     });
                 }
             });
+        },
+        firstCheck:function(){
+            var firstMask=window.localStorage.getItem("firstMask");
+            if(!firstMask)
+            {
+                window.localStorage.setItem('firstMask','already have');
+                $('body').append($('#first-layer').html());
+            }
         },
         bindEvents: function () {
             var self = this;
@@ -156,7 +166,7 @@ define("h5module/index", ['zepto', 'zeptotouch/index', 'zeptolazyload/index', 'a
         },
         init: function () {
             var self = this;
-
+            //self.firstCheck();
             self.getData();
             self.bindEvents();
 
