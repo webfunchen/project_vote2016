@@ -115,7 +115,7 @@
         "author": "孟建龙",
         "aid": "2015designwork023"
     }, {
-        "simg": "images/024.png",
+        "simg": "images/024.jpg",
         "bimg": "images/024b.jpg",
         "author": "俞杲",
         "aid": "2015designwork024"
@@ -145,7 +145,7 @@
         "author": "柠柠木",
         "aid": "2015designwork029"
     }, {
-        "simg": "images/030.png",
+        "simg": "images/030.jpg",
         "bimg": "images/030b.png",
         "author": "燕燕",
         "aid": "2015designwork030"
@@ -230,7 +230,7 @@
         "author": "猴子",
         "aid": "2015designwork046"
     }, {
-        "simg": "images/047.png",
+        "simg": "images/047.jpg",
         "bimg": "images/047b.png",
         "author": "山雨",
         "aid": "2015designwork047"
