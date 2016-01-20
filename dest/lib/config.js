@@ -1,0 +1,1 @@
+C.config({base:"./lib/",alias:{jquery:"jquery/jquery.js",zepto:"zepto/zepto.js"}});
